@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Andrew Daniel &amp; Associates</title>
+<meta name="description" content="ADA is a manufacturer's rep for food ingredients. Chocolate chips and chunks, vital wheat gluten, dextrose, palm shortening, glycerin, oils and sweeteners for bakeries, snack makers and co-manufacturers.">
+<meta name="theme-color" content="#0a0a0a">
+<meta property="og:title" content="Andrew Daniel & Associates">
+<meta property="og:description" content="Manufacturer's rep for food ingredients. Bakery, snack, confection, co-man.">
+<meta property="og:image" content="assets/ada-logo-final-ADA-AI.png">
+<link rel="icon" href="assets/ada-logo-final-ADA-AI.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,700;1,700;1,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --bg:#0a0a0a; --bg2:#111; --card:#151515; --line:#262626;
+ --ink:#f4f1ec; --mute:#a7a29a; --red:#c41e3a; --red2:#e0294a;
+ --display:"Barlow Condensed","Arial Narrow","Helvetica Neue",Arial,sans-serif;
+ --body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+ --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:17.5px/1.58 var(--body);font-weight:450;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:16px;background:var(--red);padding:8px 12px;z-index:99}
+
+/* type */
+.eyebrow{font:700 13px/1 var(--body);letter-spacing:.22em;text-transform:uppercase;color:var(--red2)}
+h1,h2,h3{font-family:var(--display);font-style:italic;font-weight:800;text-transform:uppercase;line-height:.92;letter-spacing:.005em}
+h2{font-size:clamp(40px,6vw,76px);margin:18px 0 22px}
+h3{font-size:28px;font-weight:700;line-height:1}
+p.lead{font-family:var(--body);font-size:clamp(19px,2.15vw,23px);font-weight:500;line-height:1.55;letter-spacing:-.011em;color:#d8d2c8;max-width:640px}
+p.lead strong,.lead-accent{color:var(--ink);font-weight:650}
+.pillar p,.ing p,.step p,.why p,
+body{letter-spacing:-.005em}
+.red{color:var(--red2)}
+
+
+/* body prose  -  current, sitewide */
+body{letter-spacing:-.01em}
+p,li,.pillar p,.ing p,.step p,.why p,.step ul li,.cards p,.hero .meta,.footer p,.footer a{font-family:var(--body)!important}
+p.lead,.cards .v{font-size:clamp(19px,2.15vw,23px);font-weight:500;line-height:1.55;letter-spacing:-.012em;color:#d8d2c8}
+.ing p,.pillar p,.step p,.why p{font-size:clamp(15.5px,1.35vw,17.5px);font-weight:500;line-height:1.55;letter-spacing:-.012em;color:var(--mute)}
+p.lead{font-size:clamp(19px,2.15vw,23px);max-width:640px}
+p.lead strong{color:var(--ink);font-weight:650}
+.ing p,.pillar p,.step p,.why p{font-size:clamp(15.5px,1.35vw,17.5px);color:var(--mute)}
+
+
+/* nav */
+header.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .25s,border-color .25s;border-bottom:1px solid transparent}
+header.nav.scrolled{background:rgba(10,10,10,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav .brand img{height:30px;width:auto;mix-blend-mode:lighten}
+.nav ul{display:flex;gap:30px;list-style:none;align-items:center}
+.nav ul a{text-decoration:none;font:600 14px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--mute);transition:color .2s}
+.nav ul a:hover{color:var(--ink)}
+.btn,.btn.ghost{display:inline-flex;align-items:center;gap:10px;font:700 15px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:16px 26px;border:2px solid var(--red);background:var(--red);color:#fff;transform:skewX(-10deg);transition:background .2s,border-color .2s,transform .2s,box-shadow .2s}
+.btn>span{transform:skewX(10deg);display:inline-flex;gap:10px;align-items:center}
+.btn:hover,.btn.ghost:hover{background:#8f1529;border-color:#8f1529;color:#fff;box-shadow:0 10px 30px -10px rgba(143,21,41,.75);transform:skewX(-10deg) translateY(-2px)}
+.btn.sm{padding:11px 18px;font-size:13px}
+.menu-btn{display:none;background:none;border:0;color:var(--ink);width:44px;height:44px;cursor:pointer}
+.menu-btn span{display:block;width:24px;height:2px;background:currentColor;margin:5px auto;transition:.25s}
+
+/* hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;
+ background:radial-gradient(1000px 600px at 85% 20%,rgba(196,30,58,.18),transparent 60%),
+ radial-gradient(700px 500px at 0% 100%,rgba(255,255,255,.05),transparent 60%),var(--bg)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;opacity:.35;
+ background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+ background-size:64px 64px;mask-image:radial-gradient(ellipse at 70% 40%,#000 10%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 70% 40%,#000 10%,transparent 70%)}
+.ghost-ada{position:absolute;right:-4vw;top:50%;transform:translateY(-50%);z-index:-1;font:italic 800 clamp(220px,38vw,560px)/.8 var(--display);color:transparent;-webkit-text-stroke:1px rgba(244,241,236,.07);letter-spacing:-.02em;user-select:none;pointer-events:none}
+.hero h1{font-size:clamp(54px,8.4vw,118px);margin:26px 0 26px}
+.hero h1 .line{display:block}
+.hero h1 .stripe{position:relative;display:inline-block}
+.hero h1 .stripe::after{content:"";position:absolute;left:0;right:0;bottom:.04em;height:.07em;background:var(--red);transform:skewX(-20deg);transform-origin:left;animation:draw 1s .5s cubic-bezier(.7,0,.2,1) both}
+@keyframes draw{from{transform:skewX(-20deg) scaleX(0)}to{transform:skewX(-20deg) scaleX(1)}}
+.hero .lead{margin-bottom:38px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:16px}
+.hero .meta{margin-top:56px;display:flex;flex-wrap:wrap;gap:10px 34px;color:var(--mute);font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.hero .meta b{color:var(--ink);font-weight:600}
+
+/* ticker */
+.ticker{border-block:1px solid var(--line);background:linear-gradient(180deg,#121212 0%,var(--bg2) 100%);overflow:hidden;white-space:nowrap;position:relative}
+.ticker::before,.ticker::after{content:"";position:absolute;top:0;bottom:0;width:72px;z-index:2;pointer-events:none}
+.ticker::before{left:0;background:linear-gradient(90deg,var(--bg2),transparent)}
+.ticker::after{right:0;background:linear-gradient(270deg,var(--bg2),transparent)}
+.ticker .track{display:inline-flex;align-items:center;animation:scroll 52s linear infinite;padding:22px 0;will-change:transform}
+.ticker:hover .track{animation-play-state:paused}
+.ticker span{font:italic 700 22px/1 var(--display);text-transform:uppercase;letter-spacing:.04em;padding:0 22px;color:var(--ink)}
+.ticker span.lead{color:#fff}
+.ticker span.dot{color:var(--red);padding:0 2px;font-weight:800;opacity:.9}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+section{padding:120px 0;position:relative}
+.alt{background:var(--bg2);border-block:1px solid var(--line)}
+
+/* what we do */
+.split{display:grid;grid-template-columns:1.05fr 1fr;gap:72px;align-items:start}
+.pillars{display:grid;gap:2px;background:var(--line);border:1px solid var(--line)}
+.pillar{background:var(--bg);padding:30px 30px 28px;display:grid;grid-template-columns:56px 1fr;gap:18px;transition:background .25s}
+.pillar:hover{background:#121212}
+.pillar .n{font:italic 800 40px/1 var(--display);color:var(--red)}
+.pillar p{color:var(--mute);margin-top:8px;font-size:16px}
+
+/* ingredients */
+.ing-head{display:flex;justify-content:space-between;align-items:end;gap:40px;flex-wrap:wrap;margin-bottom:54px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.ing{position:relative;background:var(--card);border:1px solid var(--line);padding:30px 26px 28px;overflow:hidden;transition:transform .3s,border-color .3s}
+.ing::before{content:"";position:absolute;left:0;top:0;height:3px;width:0;background:var(--red);transition:width .4s cubic-bezier(.7,0,.2,1)}
+.ing:hover{transform:translateY(-4px);border-color:#3a3a3a}
+.ing:hover::before{width:100%}
+.ing .tag{font:700 11px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+.ing h3{margin:14px 0 12px;font-size:32px}
+.ing p{color:var(--mute);font-size:15.5px}
+.ing.feature{background:linear-gradient(160deg,#1c0b0f,var(--card) 60%);border-color:#4a1520}
+.ing.feature .tag{color:var(--red2)}
+.ing.more{display:flex;flex-direction:column;justify-content:center;border-style:dashed;background:transparent}
+.ing.more a{color:var(--red2);font-weight:600;text-decoration:none}
+.ing.more a:hover{text-decoration:underline}
+.markets{margin-top:64px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.markets .lbl{color:var(--mute);font-size:14px;letter-spacing:.12em;text-transform:uppercase;margin-right:10px}
+.chip{border:1px solid #333;padding:10px 18px;font:italic 700 19px/1 var(--display);text-transform:uppercase;letter-spacing:.04em;transform:skewX(-10deg)}
+.chip>span{display:inline-block;transform:skewX(10deg)}
+
+/* how it works */
+/* how-it-works checklist  -  clean current type */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:60px;counter-reset:s;position:relative}
+.step{padding:0 34px 0 0;position:relative}
+.step .bar{height:3px;background:var(--line);margin-bottom:34px;position:relative;overflow:hidden}
+.step .bar::after{content:"";position:absolute;inset:0;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .9s cubic-bezier(.7,0,.2,1)}
+.step.in .bar::after{transform:scaleX(1)}
+.step:nth-child(2) .bar::after{transition-delay:.25s}.step:nth-child(3) .bar::after{transition-delay:.5s}
+.step .big{font:italic 800 96px/.8 var(--display);color:transparent;-webkit-text-stroke:1.5px var(--red);margin-bottom:22px}
+.step h3{font-size:38px;margin-bottom:14px}
+.step p{color:var(--mute)}
+.step ul{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:11px}
+.step ul li{position:relative;margin:0;padding:0 0 0 20px;font-family:var(--body)!important;font-size:15px!important;font-weight:500!important;line-height:1.4!important;letter-spacing:-.015em!important;color:#bbb4a8!important}
+.step ul li::before{content:"";position:absolute;left:0;top:.62em;width:9px;height:2px;background:var(--red)}
+
+/* why */
+.why{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--line);border:1px solid var(--line);margin-top:56px}
+.why>div{background:var(--bg2);padding:44px 40px}
+.why h3{font-size:34px;margin-bottom:14px}
+.why h3 em{color:var(--red2);font-style:inherit}
+.why p{color:var(--mute)}
+.quote{margin-top:72px;font:italic 700 clamp(30px,4.2vw,54px)/1.05 var(--display);text-transform:uppercase;max-width:980px}
+.quote small{display:block;margin-top:18px;font:600 14px/1 var(--body);letter-spacing:.14em;color:var(--mute);font-style:normal}
+
+/* contact */
+.contact{padding:140px 0;overflow:hidden;isolation:isolate}
+.contact::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(900px 500px at 50% 110%,rgba(196,30,58,.28),transparent 65%)}
+.contact .wrap{text-align:center}
+.contact .eyebrow{text-align:center}
+.contact h2{font-size:clamp(52px,9vw,128px)}
+.contact .lead{margin:0 auto 46px}
+.contact .ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:16px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:70px;text-align:left}
+.cards>a,.cards>div{display:block;text-decoration:none;border:1px solid var(--line);background:rgba(17,17,17,.7);padding:26px 26px;transition:border-color .2s}
+.cards>a:hover{border-color:var(--red)}
+.cards .k{font:700 11px/1 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+.cards .v{font:italic 700 26px/1.1 var(--display);margin-top:10px;word-break:break-word}
+
+footer{border-top:1px solid var(--line);padding:46px 0;color:var(--mute);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+footer img{height:26px;width:auto;opacity:.9}
+footer a{text-decoration:none}footer a:hover{color:var(--ink)}
+footer .links{display:flex;gap:22px;flex-wrap:wrap}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.no-js .rv{opacity:1;transform:none}
+
+@media (max-width:980px){
+ .split{grid-template-columns:1fr;gap:48px}
+ .steps{grid-template-columns:1fr;gap:56px}
+ .step{padding:0}
+ .why{grid-template-columns:1fr}
+ .cards{grid-template-columns:1fr}
+}
+@media (max-width:820px){
+ .menu-btn{display:block}
+ .nav ul{position:fixed;inset:72px 0 auto 0;flex-direction:column;gap:0;background:rgba(10,10,10,.97);border-bottom:1px solid var(--line);padding:10px 24px 24px;transform:translateY(-120%);transition:transform .3s;z-index:-1}
+ .nav ul.open{transform:none}
+ .nav ul li{width:100%}
+ .nav ul a{display:block;padding:16px 0;border-bottom:1px solid var(--line);font-size:15px}
+ .nav ul li:last-child a{border:0;margin-top:14px;text-align:center;justify-content:center}
+ .nav.open-menu .menu-btn span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+ .nav.open-menu .menu-btn span:nth-child(2){opacity:0}
+ .nav.open-menu .menu-btn span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+ .nav.open-menu{background:rgba(10,10,10,.97)}
+ section{padding:88px 0}
+ .why>div{padding:34px 26px}
+ .ghost-ada{right:-20vw;opacity:.8}
+}
+@media (max-width:480px){
+ body{font-size:16px}
+ .wrap{padding:0 20px}
+ .btn{padding:15px 20px;font-size:14px}
+ .hero .ctas .btn{flex:1 1 100%;justify-content:center}
+ .contact .ctas .btn{flex:1 1 100%;justify-content:center}
+ .pillar{grid-template-columns:1fr;gap:6px;padding:26px 22px}
+}
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body class="no-js">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+ <div class="wrap">
+ <a class="brand" href="#top" aria-label="ADA home"><img src="assets/ada-logo-trim.png" alt="ADA" width="178" height="30" style="height:30px"></a>
+ <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+ <ul id="menu">
+ <li><a href="#what">What we do</a></li>
+ <li><a href="#ingredients">Ingredients</a></li>
+ <li><a href="#how">How it works</a></li>
+ <li><a href="#why">Why ADA</a></li>
+ <li><a class="btn sm" href="sms:+12488822639"><span>Text us now</span></a></li>
+ </ul>
+ </div>
+</header>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero" id="top">
+ <div class="ghost-ada" aria-hidden="true">ADA</div>
+ <div class="wrap">
+ <h1 class="rv">
+ <span class="line">The right ingredient.</span>
+ <span class="line">The right price.</span>
+ <span class="line"><span class="stripe red">On the dock.</span></span>
+ </h1>
+ <p class="lead rv">ADA connects bakeries, snack makers and co-manufacturers with the proteins, sweeteners, fats and oils that keep their lines running. One call, one PO, one guy who picks up the phone.</p>
+ <div class="ctas rv">
+ <a class="btn" href="sms:+12488822639"><span>Text us now</span></a>
+ <a class="btn" href="tel:+12488822639"><span>Call us</span></a>
+ <a class="btn" href="mailto:hello@getada.ai?subject=Ingredient%20quote%20request"><span>Email</span></a>
+ </div>
+ <div class="meta rv">
+ <div><b>Bakery</b></div><div><b>Snack</b></div><div><b>Confection</b></div><div><b>Co-man</b></div><div><b>Nationwide</b></div>
+ </div>
+ </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+ <div class="track">
+ <span class="lead">Chocolate chips</span><span class="dot">/</span><span class="lead">Chunks & morsels</span><span class="dot">/</span><span class="lead">White chip & chunk</span><span class="dot">/</span><span class="lead">Cocoa powder</span><span class="dot">/</span><span class="lead">Vital wheat gluten</span><span class="dot">/</span><span class="lead">Dextrose</span><span class="dot">/</span><span>Soluble tapioca fiber</span><span class="dot">/</span><span>Maltodextrin</span><span class="dot">/</span><span>Cassava</span><span class="dot">/</span><span>Rice protein</span><span class="dot">/</span><span>USP glycerin</span><span class="dot">/</span><span>RBD soy</span><span class="dot">/</span><span>Canola oil</span><span class="dot">/</span><span>Corn oil</span><span class="dot">/</span><span class="lead">Chocolate chips</span><span class="dot">/</span><span class="lead">Chunks & morsels</span><span class="dot">/</span><span class="lead">White chip & chunk</span><span class="dot">/</span><span class="lead">Cocoa powder</span><span class="dot">/</span><span class="lead">Vital wheat gluten</span><span class="dot">/</span><span class="lead">Dextrose</span><span class="dot">/</span><span>Soluble tapioca fiber</span><span class="dot">/</span><span>Maltodextrin</span><span class="dot">/</span><span>Cassava</span><span class="dot">/</span><span>Rice protein</span><span class="dot">/</span><span>USP glycerin</span><span class="dot">/</span><span>RBD soy</span><span class="dot">/</span><span>Canola oil</span><span class="dot">/</span><span>Corn oil</span><span class="dot">/</span>
+ </div>
+</div>
+
+<!-- WHAT WE DO -->
+<section id="what">
+ <div class="wrap split">
+ <div>
+ <div class="eyebrow rv">What we do</div>
+ <h2 class="rv">We sit between the<br><span class="red">mill and the mixer.</span></h2>
+ <p class="lead rv"><strong>ADA is a manufacturer's representative.</strong> We work directly with the manufacturers of products to get you the best pricing and the fastest delivery possible. Speed to market is our forte.</p>
+ <p class="lead rv" style="margin-top:18px">You get a real person who knows your formula, your volumes and your timeline. Your supplier gets a rep who knows the plant floor. Everybody wins, nobody gets ghosted.</p>
+ </div>
+ <div class="pillars rv">
+ <div class="pillar"><div class="n">01</div><div><h3>Source</h3><p>We match your spec to the right producer. Protein level, mesh, melt point, DE: whatever matters to your formula.</p></div></div>
+ <div class="pillar"><div class="n">02</div><div><h3>Price</h3><p>Straight quotes with freight in mind. No mystery margins. No "let me get back to you" for three weeks.</p></div></div>
+ <div class="pillar"><div class="n">03</div><div><h3>Deliver</h3><p>We coordinate PO, release and delivery, and we stay on it until the truck is unloaded and the paperwork is clean.</p></div></div>
+ <div class="pillar"><div class="n">04</div><div><h3>Document</h3><p>COAs, spec sheets and invoices go where they need to, formatted the way your QA and AP teams want them.</p></div></div>
+ </div>
+ </div>
+</section>
+
+<!-- INGREDIENTS -->
+<section id="ingredients" class="alt">
+ <div class="wrap">
+ <div class="ing-head">
+ <div>
+ <div class="eyebrow rv">Ingredients we move</div>
+ <h2 class="rv">Core lines.<br><span class="red">Real volume.</span></h2>
+ </div>
+ <p class="lead rv" style="max-width:440px">The workhorses of commercial baking and snack production, sourced from partners we know and trust. Need something not on the list? Ask. That's literally the job.</p>
+ </div>
+ <div class="grid">
+ <article class="ing feature rv"><div class="tag">Chocolate · Lead line</div><h3>Chocolate</h3><p>Chips, chunks, morsels and drops  -  semisweet, bittersweet, milk, plus white chip and chunk. Cocoa powder (natural and Dutch-process) and bake-stable inclusions for cookies, brownies, bars and confection.</p></article>
+ <article class="ing feature rv"><div class="tag">Protein</div><h3>Vital Wheat Gluten</h3><p>Strength, structure and protein boost for breads, bars, high-protein cookies and baked snacks.</p></article>
+ <article class="ing feature rv"><div class="tag">Sweetener</div><h3>Dextrose</h3><p>Corn and tapioca dextrose and maltodextrin  -  browning, fermentation, sweetness and texture for bakery and confection.</p></article>
+ <article class="ing rv"><div class="tag">Protein</div><h3>Rice Protein</h3><p>Plant-based, allergen-friendly protein for bars, bites, crisps and clean-label builds.</p></article>
+ <article class="ing rv"><div class="tag">Fat · Shortening</div><h3>All Purpose RBD soy</h3><p>Palm shortening that does the job across cookies, brownies, icings and laminated work.</p></article>
+ <article class="ing rv"><div class="tag">Humectant</div><h3>USP Glycerin</h3><p>Vegetable-derived USP glycerin for bars, fillings, nutraceutical and personal-care formulas  -  soft bite and shelf life.</p></article>
+ <article class="ing rv"><div class="tag">Fats &amp; Oils</div><h3>Oils</h3><p>Frying, release, inclusion and formula oils, matched to your process and price point.</p></article>
+ <article class="ing rv"><div class="tag">Flour</div><h3>Cassava</h3><p>100 for baking and 101 for snack food  -  clean-label flour for gluten-free and specialty lines.</p></article>
+ <article class="ing more rv"><div class="tag">Not seeing it?</div><h3>Send the spec.</h3><p><a href="mailto:hello@getada.ai?subject=Ingredient%20spec%20request">hello@getada.ai →</a></p></article>
+ </div>
+ <div class="markets rv">
+ <span class="lbl">Who we sell into</span>
+ <span class="chip"><span>Commercial bakery</span></span>
+ <span class="chip"><span>Snack</span></span>
+ <span class="chip"><span>Confection</span></span>
+ <span class="chip"><span>Co-manufacturers</span></span>
+ <span class="chip"><span>Protein &amp; better-for-you</span></span>
+ </div>
+ </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+ <div class="wrap">
+ <div class="eyebrow rv">How it works</div>
+ <h2 class="rv">Three steps.<br><span class="red">Zero runaround.</span></h2>
+ <p class="lead rv">We keep the process simple on purpose. You've got a plant to run.</p>
+ <div class="steps">
+ <div class="step rv"><div class="bar"></div><div class="big">01</div><h3>You send a PO</h3><p>Tell us what you need, how much and when. If you're still pricing, we'll quote it first.</p>
+ <ul><li>Spec &amp; volume confirmed</li><li>Pricing locked</li><li>Delivery window set</li></ul></div>
+ <div class="step rv"><div class="bar"></div><div class="big">02</div><h3>We fulfill</h3><p>We place it with the right supply partner, coordinate the release, and track it to your dock.</p>
+ <ul><li>COA with the load</li><li>Freight coordinated</li><li>Updates without chasing</li></ul></div>
+ <div class="step rv"><div class="bar"></div><div class="big">03</div><h3>We invoice</h3><p>A clean invoice that matches your PO and is easy for your AP team to pay. That's it.</p>
+ <ul><li>Matches PO line for line</li><li>ACH or wire</li><li>Questions answered fast</li></ul></div>
+ </div>
+ </div>
+</section>
+
+<!-- WHY -->
+<section id="why" class="alt">
+ <div class="wrap">
+ <div class="eyebrow rv">Why bakers work with Andy</div>
+ <h2 class="rv">Ingredient people.<br><span class="red">Not order takers.</span></h2>
+ <div class="why rv">
+ <div><h3>Built for <em>co-mans.</em></h3><p>Multiple brands, tight runs and changing forecasts. We're used to the pace and we help you keep up with it.</p></div>
+ <div><h3>You get <em>speed.</em></h3><p>Quotes fast. POs placed the same day when we can. Updates without the chase. Your line doesn’t wait  -  neither do we.</p></div>
+ <div><h3>We speak <em>plant floor.</em></h3><p>Absorption, dough strength, shelf life, line speed. We get why a spec matters before you have to explain it twice.</p></div>
+ <div><h3>Straight <em>answers.</em></h3><p>If a price is moving, you'll hear it from us first. If we can't hit your date, we'll say so and find another way.</p></div>
+ </div>
+ <p class="quote rv">Your line doesn't wait.<br>Neither do we.<small> -  The ADA way</small></p>
+ </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+ <div class="wrap">
+ <div class="eyebrow rv">Let's move some ingredients</div>
+ <h2 class="rv">Send the spec.<br><span class="red">Get a number.</span></h2>
+ <p class="lead rv">Running low, re-sourcing, or just tired of waiting on your current supplier? Shoot Andy an email or pick up the phone.</p>
+ <div class="ctas rv">
+ <a class="btn" href="sms:+12488822639"><span>Text us now</span></a>
+ <a class="btn" href="tel:+12488822639"><span>Call us</span></a>
+ <a class="btn" href="mailto:hello@getada.ai?subject=Ingredient%20quote%20request"><span>Email</span></a>
+ </div>
+ <div class="cards rv">
+ <a href="mailto:hello@getada.ai"><div class="k">Email</div><div class="v">hello@getada.ai</div></a>
+ <a href="tel:+12488822639"><div class="k">Phone</div><div class="v">(248) 882-2639</div></a>
+ <div><div class="k">Coverage</div><div class="v">Nationwide</div></div>
+ </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+ <img src="assets/ada-logo-trim.png" alt="ADA" width="154" height="26" loading="lazy">
+ <div>© <span id="yr">2026</span> Andrew Daniel &amp; Associates, INC · Nationwide</div>
+ <div class="links"><a href="mailto:hello@getada.ai">hello@getada.ai</a><a href="tel:+12488822639">(248) 882-2639</a></div>
+ </div>
+</footer>
+
+<script>
+(function(){
+ document.body.classList.remove('no-js');
+ var nav=document.getElementById('nav'),btn=document.getElementById('menuBtn'),menu=document.getElementById('menu');
+ function onScroll(){nav.classList.toggle('scrolled',window.scrollY>20)}
+ window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+ btn.addEventListener('click',function(){var o=menu.classList.toggle('open');nav.classList.toggle('open-menu',o);btn.setAttribute('aria-expanded',o)});
+ menu.addEventListener('click',function(e){if(e.target.closest('a')){menu.classList.remove('open');nav.classList.remove('open-menu');btn.setAttribute('aria-expanded','false')}});
+ document.getElementById('yr').textContent=new Date().getFullYear();
+ var els=document.querySelectorAll('.rv');
+ if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+ var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+ els.forEach(function(e,i){e.style.transitionDelay=(Math.min(i%4,3)*70)+'ms';io.observe(e)});
+})();
+</script>
+</body>
+</html>
